@@ -5,33 +5,36 @@ public class Carro {
     private Motor motor;
     private Direcao direcao;
 
-    /**
-     * @return the motor
-     */
+    public Carro() {
+        motor = new Motor();
+    }
+    
+    public void ImprimeDados(){
+        System.out.println("Potencia do motr: " + motor.getPotencia());
+    }
+
+    public Carro(int potencia) {
+        motor = new Motor(potencia);
+    }
+
+    public void ligarCarro(int potencia) {
+        motor = new Motor(potencia);
+    }
+
     public Motor getMotor() {
         return motor;
     }
 
-    /**
-     * @param motor the motor to set
-     */
     public void setMotor(Motor motor) {
         this.motor = motor;
     }
 
-    /**
-     * @return the direcao
-     */
     public Direcao getDirecao() {
         return direcao;
     }
 
-    /**
-     * @param direcao the direcao to set
-     */
     public void setDirecao(Direcao direcao) {
         this.direcao = direcao;
     }
-    
 
 }
